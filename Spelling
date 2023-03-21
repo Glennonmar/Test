@@ -1,0 +1,17 @@
+import random
+
+words = ['apple', 'banana', 'cherry', 'orange', 'grape']
+
+def quiz():
+    score = 0
+    random.shuffle(words)
+    for word in words:
+        guess = input("Spell '" + word + "': ")
+        if guess.lower() == word:
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect!")
+    print("You got", score, "out of", len(words), "words correct.")
+
+quiz()
